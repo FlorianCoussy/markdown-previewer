@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2C2E43;
+  color: #FFF;
+}
+#root #header h1 {
+  margin-bottom: 1em;
+  text-align: center;
+}
+#root .wrapper {
+  width: 100%;
+  padding: 0 6em;
+}
+#root .wrapper .card-wrapper {
+  width: 50%;
+  float: left;
+}
+#root .wrapper .card-wrapper .card {
+  height: 70vh;
+  margin: 0 1em;
+  padding: 0.5em 1em;
+  color: #595260;
+}
+#root #footer {
+  clear: both;
+  padding-top: 1em;
+  text-align: center;
+}
+#root #footer a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
