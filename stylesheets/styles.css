@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,600");
 #root {
   height: 100vh;
   display: flex;
@@ -9,6 +9,7 @@
 }
 #root #header h1 {
   margin-bottom: 1em;
+  font-size: 3em;
   text-align: center;
 }
 #root .wrapper {
@@ -22,12 +23,31 @@
 #root .wrapper .card-wrapper .card {
   height: 70vh;
   margin: 0 1em;
-  padding: 0.5em 1em;
+  padding: 0.5em 1em 1em;
   color: #595260;
+}
+#root .wrapper .card-wrapper .card .toolbar {
+  border-bottom: 2px solid #595260;
+  color: #2C2E43;
+}
+#root .wrapper .card-wrapper .card .toolbar h2 {
+  display: flex;
+  align-items: center;
+  margin-top: 0.2em;
+  font-size: 1em;
+  font-weight: 600;
+}
+#root .wrapper .card-wrapper .card .toolbar h2 svg {
+  margin: 0 0.6em 0 0.4em;
+}
+#root .wrapper .card-wrapper .card .text {
+  height: 100%;
+  margin-top: 1em;
+  overflow-y: scroll;
 }
 #root #footer {
   clear: both;
-  padding-top: 1em;
+  padding-top: 1.6em;
   text-align: center;
 }
 #root #footer a {

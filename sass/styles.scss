@@ -1,9 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,600");
 
 $dark-grey: #2C2E43;
 $grey: #595260;
 $light-grey: #B2B1B9;
-$yellow: #FFD523;
 $white: #FFF;
 
 #root {
@@ -16,6 +15,7 @@ $white: #FFF;
 
   #header h1 {
     margin-bottom: 1em;
+    font-size: 3em;
     text-align: center;
   }
 
@@ -30,15 +30,38 @@ $white: #FFF;
       .card {
         height: 70vh;
         margin: 0 1em;
-        padding: .5em 1em;
+        padding: .5em 1em 1em;
         color: $grey;
+
+        .toolbar {
+          border-bottom: 2px solid $grey;
+          color: $dark-grey;
+
+          h2 {
+            display: flex;
+            align-items: center;
+            margin-top: .2em;
+            font-size: 1em;
+            font-weight: 600;
+
+            svg {
+              margin: 0 .6em 0 .4em;
+            }
+          }
+        }
+
+        .text {
+          height: 100%;
+          margin-top: 1em;
+          overflow-y: scroll;
+        }
       }
     }
   }
 
   #footer {
     clear: both;
-    padding-top: 1em;
+    padding-top: 1.6em;
     text-align: center;
 
     a {
