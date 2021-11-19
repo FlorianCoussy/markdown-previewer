@@ -53,6 +53,21 @@
   box-shadow: 0 0 2px #595260;
   outline: none;
 }
+#root .wrapper .card-wrapper .card #preview h1, #root .wrapper .card-wrapper .card #preview h2 {
+  border-bottom: 2px solid #2C2E43;
+  padding-bottom: 0.2em;
+}
+#root .wrapper .card-wrapper .card #preview h2 {
+  border-bottom-width: 1px;
+}
+#root .wrapper .card-wrapper .card #preview blockquote {
+  margin-left: 1em;
+  padding-left: 0.5em;
+  border-left: 3px solid #2C2E43;
+}
+#root .wrapper .card-wrapper .card #preview img {
+  width: 100%;
+}
 #root #footer {
   clear: both;
   padding-top: 1.6em;

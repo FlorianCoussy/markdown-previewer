@@ -64,6 +64,27 @@ $white: #FFF;
             outline: none;
           }
         }
+
+        #preview {
+          h1, h2 {
+            border-bottom: 2px solid $dark-grey;
+            padding-bottom: .2em;
+          }
+
+          h2 {
+            border-bottom-width: 1px;
+          }
+
+          blockquote {
+            margin-left: 1em;
+            padding-left: .5em;
+            border-left: 3px solid $dark-grey;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
       }
     }
   }
