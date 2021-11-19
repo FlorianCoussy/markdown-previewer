@@ -34,7 +34,7 @@
       </div>
     );
 
-    const Editor = () => (
+    const Editor = ({ markdown, handleChange }) => (
       <div className="card-wrapper">
         <div className="card">
           <div className="toolbar">
@@ -46,31 +46,36 @@
               Editor
             </h2>
           </div>
-          <div className="text">
-            {placeholder}
-          </div>
+          <textarea
+            id="editor"
+            className="text"
+            value={markdown}
+            onChange={handleChange}
+          ></textarea>
         </div>
       </div>
     );
 
-    const Preview = () => (
-      <div className="card-wrapper">
-        <div className="card">
-          <div className="toolbar">
-            <h2>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-eye-fill" viewBox="0 0 16 16">
-                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
-                <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
-              </svg>
-              Preview
-            </h2>
-          </div>
-          <div className="text">
-            Rendered mardown
+    const Preview = ({ markdown }) => {
+      return (
+        <div className="card-wrapper">
+          <div className="card">
+            <div className="toolbar">
+              <h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-eye-fill" viewBox="0 0 16 16">
+                  <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                  <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                </svg>
+                Preview
+              </h2>
+            </div>
+            <div id="preview" className="text">
+              {markdown}
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    };
 
     const Footer = () => (
       <div id="footer">
@@ -85,14 +90,16 @@
       constructor(props) {
         super(props);
 
-        this.state = {};
+        this.state = {
+          markdown: placeholder,
+        };
 
-        this.handleClick = this.handleClick.bind(this);
+        this.handleEditorChange = this.handleEditorChange.bind(this);
       }
 
-      handleClick = () => {
+      handleEditorChange = ({ target }) => {
         this.setState((state) => ({
-          test: state.test + 1
+          markdown: target.value,
         }));
       };
 
@@ -100,8 +107,13 @@
         return (
           <div className="wrapper">
             <Header />
-            <Editor />
-            <Preview />
+            <Editor
+              markdown={this.state.markdown}
+              handleChange={this.handleEditorChange}
+            />
+            <Preview
+              markdown={this.state.markdown}
+            />
             <Footer />
           </div >
         );
