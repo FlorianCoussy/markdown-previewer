@@ -65,8 +65,16 @@
   padding-left: 0.5em;
   border-left: 3px solid #2C2E43;
 }
+#root .wrapper .card-wrapper .card #preview table th, #root .wrapper .card-wrapper .card #preview table td {
+  border: 2px solid #2C2E43;
+  padding: 0.2em 0.6em;
+}
+#root .wrapper .card-wrapper .card #preview > ul {
+  margin: 1em auto;
+}
 #root .wrapper .card-wrapper .card #preview img {
   width: 100%;
+  margin: 1em auto;
 }
 #root #footer {
   clear: both;

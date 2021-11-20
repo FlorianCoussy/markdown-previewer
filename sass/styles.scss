@@ -81,8 +81,20 @@ $white: #FFF;
             border-left: 3px solid $dark-grey;
           }
 
+          table {
+            th, td {
+              border: 2px solid $dark-grey;
+              padding: .2em .6em;
+            }
+          }
+
+          &> ul {
+            margin: 1em auto;
+          }
+
           img {
             width: 100%;
+            margin: 1em auto;
           }
         }
       }
