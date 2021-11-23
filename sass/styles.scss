@@ -37,15 +37,46 @@ $white: #FFF;
           border-bottom: 2px solid $grey;
           color: $dark-grey;
 
+          svg {
+            margin: 0 .6em 0 .4em;
+          }
+
           h2 {
+            float: left;
             display: flex;
             align-items: center;
             margin-top: .2em;
             font-size: 1em;
             font-weight: 600;
+          }
+          
+          .tools {
+            float: right;
+            display: flex;
+            align-items: center;
 
-            svg {
-              margin: 0 .6em 0 .4em;
+            span {
+              display: flex;
+              padding: 0.2em 0;
+
+              svg {
+                border-radius: 3px;
+                margin-right: 0;
+                cursor: pointer;
+                &:hover {
+                  color: $grey;
+                }
+                &:last-of-type {
+                  margin-right: .4em;
+                }
+              }
+            }
+            
+            .vertical-divider {
+              display: inline;
+              height: 18px;
+              margin: 0 .4em 0 .8em;
+              border-right: 1px solid $light-grey;
             }
           }
         }
@@ -57,7 +88,6 @@ $white: #FFF;
           color: inherit;
           overflow-y: scroll;
           resize: none;
-
           &:focus {
             border-radius: 3px;
             box-shadow: 0 0 2px $grey;

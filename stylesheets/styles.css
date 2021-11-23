@@ -30,15 +30,42 @@
   border-bottom: 2px solid #595260;
   color: #2C2E43;
 }
+#root .wrapper .card-wrapper .card .toolbar svg {
+  margin: 0 0.6em 0 0.4em;
+}
 #root .wrapper .card-wrapper .card .toolbar h2 {
+  float: left;
   display: flex;
   align-items: center;
   margin-top: 0.2em;
   font-size: 1em;
   font-weight: 600;
 }
-#root .wrapper .card-wrapper .card .toolbar h2 svg {
-  margin: 0 0.6em 0 0.4em;
+#root .wrapper .card-wrapper .card .toolbar .tools {
+  float: right;
+  display: flex;
+  align-items: center;
+}
+#root .wrapper .card-wrapper .card .toolbar .tools span {
+  display: flex;
+  padding: 0.2em 0;
+}
+#root .wrapper .card-wrapper .card .toolbar .tools span svg {
+  border-radius: 3px;
+  margin-right: 0;
+  cursor: pointer;
+}
+#root .wrapper .card-wrapper .card .toolbar .tools span svg:hover {
+  color: #595260;
+}
+#root .wrapper .card-wrapper .card .toolbar .tools span svg:last-of-type {
+  margin-right: 0.4em;
+}
+#root .wrapper .card-wrapper .card .toolbar .tools .vertical-divider {
+  display: inline;
+  height: 18px;
+  margin: 0 0.4em 0 0.8em;
+  border-right: 1px solid #B2B1B9;
 }
 #root .wrapper .card-wrapper .card .text {
   height: 100%;
